@@ -1,0 +1,141 @@
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+\usepackage{parskip} 	
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Gilbert TUYAMBAZE} \\[7.5pt]
+\href{https://github.com/GILBERT-Tuyambaze}{\raisebox{-0.05\height}\faGithub\ GILBERT-Tuyambaze} \ $|$ \ 
+\href{https://www.linkedin.com/in/gilbert-tuyambaze-02044a3bb/}{\raisebox{-0.05\height}\faLinkedin\ Gilbert TUYAMBAZE} \ $|$ \ 
+\href{https://tuyambaze-gilbert.vercel.app}{\raisebox{-0.05\height}\faGlobe \ My Portfolio} \ $|$ \ 
+\href{mailto:tuyambazegilbert01@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ tuyambazegilbert01@gmail.com} \ $|$ \ 
+\href{tel:+250793438873}{\raisebox{-0.05\height}\faMobile \ +250 793 438 8873} \\
+\end{tabularx}
+
+\section{Summary}
+Highly motivated graduate in Mathematics, Physics, and Computer Science with strong
+skills in web development, software design, and problem-solving. Developed and deployed
+multiple real-world software projects, including a school website, automated
+announcement system, and community learning platform. Founder of Twigane
+Community, mentoring students in programming and improving access to technology
+education. Demonstrates leadership, initiative, and resilience through self-directed
+learning and community impact. Passionate about pursuing Computer Science at the
+university level to deepen technical expertise and develop innovative solutions that
+improve education and empower underserved communities.
+ \href{https://github.com/jitinnair1/autoCV}{click here}.
+
+%Experience
+\section{Work Experience}
+
+\begin{jobshort}{Designation}{Jan 2021 - present}
+long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+\end{jobshort}
+
+
+\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
+\item long long line of blah blah that will wrap when the table fills the column width
+\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+\end{joblong}
+  
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+
+2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+
+2022 & Class 12th Some Board \hfill  (Grades) \\
+
+2021 & Class 10th Some Board \hfill  (Grades) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\begin{refsection}[citations.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
+Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
